@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=PyServer
+Exec=lxterminal -e bash -c 'cd /home/pi/watch_for_dirs_to_exist/ && bash _main.bash 1 30 ../autostart.bash; bash'
+Icon=lxterminal
+Type=Application
+Categories=Utility;
