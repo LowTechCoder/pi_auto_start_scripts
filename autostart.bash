@@ -10,4 +10,4 @@ rsync -r "/home/pi/snap/retroarch/427/.config/retroarch/playlists" "$my_date/"
 rsync -r "/home/pi/snap/retroarch/427/.config/retroarch/saves" "$my_date/"
 rsync -r "/home/pi/snap/retroarch/427/.config/retroarch/states" "$my_date/"
 
-retroarch -f && sudo shutdown now
+retroarch -f && echo 'To prevent shutdown, close this window!'; sleep 5;  sudo shutdown now
