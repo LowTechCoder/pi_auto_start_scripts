@@ -1,4 +1,5 @@
 # pi_auto_start_scripts
 ```
-cp /media/pi/USB30FD/desktop.txt /home/pi/.config/autostart/.desktop
+mkdir /home/pi/.config/autostart/
+cp pi_auto_start_scripts/desktop.txt /home/pi/.config/autostart/.desktop
 ```
