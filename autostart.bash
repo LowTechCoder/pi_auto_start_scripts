@@ -1,15 +1,15 @@
 #auto backup script
 my_date=$(date +'%Y-%m-%d')
 cd /media/pi/RA-DATA/rasp_pi_retroarch_conf_backups/
+radir="/home/pi/.config/retroarch"
 mkdir -p "$my_date/system/"
-#only back up system once
-rsync -r "/home/pi/snap/retroarch/427/.config/retroarch/system" "$my_date/"
-rsync -r "/home/pi/snap/retroarch/427/.config/retroarch/config" "$my_date/"
-rsync -r "/home/pi/snap/retroarch/427/.config/retroarch/autoconfig" "$my_date/"
-rsync -r "/home/pi/snap/retroarch/427/.config/retroarch/playlists" "$my_date/"
-rsync -r "/home/pi/snap/retroarch/427/.config/retroarch/saves" "$my_date/"
-rsync -r "/home/pi/snap/retroarch/427/.config/retroarch/states" "$my_date/"
-rsync -r "/home/pi/snap/retroarch/427/.config/retroarch/retroarch.cfg" "$my_date/"
+rsync -r "$radir/system" "$my_date/"
+rsync -r "$radir/config" "$my_date/"
+rsync -r "$radir/autoconfig" "$my_date/"
+rsync -r "$radir/playlists" "$my_date/"
+rsync -r "$radir/saves" "$my_date/"
+rsync -r "$radir/states" "$my_date/"
+rsync -r "$radir/retroarch.cfg" "$my_date/"
 
 #retroarch -f && sudo shutdown now
-retroarch -f && echo 'To prevent shutdown, close this window!'; sleep 5;  sudo shutdown now
+retroarch -f && echo 'To prevent shutdown, close this window!'; sleep 7;  sudo shutdown now
