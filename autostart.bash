@@ -3,7 +3,8 @@ do_backup () {
 
 	my_date=$(date +'%Y-%m-%d')
 	cd /media/pi/RA-DATA/rasp_pi_retroarch_conf_backups/
-	radir="/home/pi/snap/retroarch/427/.config/retroarch"
+	#radir needs to match your setup
+	radir="/home/pi/.config/retroarch"
 	mkdir -p "$my_date/system/"
 	#autoconfig and system are very large backups.  Only enable these once in a while.
 	#rsync -r "$radir/autoconfig" "$my_date/"
