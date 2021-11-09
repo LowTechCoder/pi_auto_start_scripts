@@ -5,9 +5,10 @@ do_backup () {
 	cd /media/pi/RA-DATA/rasp_pi_retroarch_conf_backups/
 	radir="/home/pi/snap/retroarch/427/.config/retroarch"
 	mkdir -p "$my_date/system/"
-	rsync -r "$radir/system" "$my_date/"
+	#autoconfig and system are very large backups.  Only enable these once in a while.
+	#rsync -r "$radir/autoconfig" "$my_date/"
+	#rsync -r "$radir/system" "$my_date/"
 	rsync -r "$radir/config" "$my_date/"
-	rsync -r "$radir/autoconfig" "$my_date/"
 	rsync -r "$radir/playlists" "$my_date/"
 	rsync -r "$radir/saves" "$my_date/"
 	rsync -r "$radir/states" "$my_date/"
